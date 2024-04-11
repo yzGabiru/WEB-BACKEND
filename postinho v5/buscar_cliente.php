@@ -32,6 +32,7 @@ if (isset($_GET['valor'])) {
 
         //LOOP PARA MOSTRAR OS DADOS DO PACIENTE UM EMBAIXO DO OUTRO
         while ($row = $consulta->fetch(PDO::FETCH_ASSOC)) {
+            
             //PEGA NO ARRAY DE LINHA O TIPO SANGUINEO
             $tipo_s =  $row["TIPO_S"];
             //PEGA O NOME DO TIPO SANGUINEO BASEADO NO ID
