@@ -1,0 +1,124 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*
+body {
+    justify-content: center;
+    align-items: center;
+    font-family: 'poppins', sans-serif ;
+}
+
+h1, h2 {
+  color:#F49F1C;
+}
+.site-header {
+    background-color: #030E4F; /* Azul */
+    color: #F49F1C;
+    padding: 15px; /* Espaçamento interno */
+    position: fixed; 
+    top: 0;
+    left: 0; 
+    font-family:'poppins', sans-serif;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-title {
+    font-size:50px;
+    font-weight: bold;
+}
+
+/* Estilo para os links de navegação */
+.site-nav a {
+    text-decoration: none;
+    color: #F49F1C;
+    margin-right: 20px;
+    padding: 30px;
+    font-size: 20px;
+    
+}
+
+
+/* Estilo para o rodapé */
+.site-footer {
+    background-color: #030E4F; /* Azul */
+    color: #F49F1C; /* Texto branco */
+    text-align: center;
+    padding: 10px;
+    font-family: 'poppins',sans-serif;
+    position: fixed; /* Fixa o rodapé no final da página */
+    bottom: 0; /* Alinha o rodapé à parte inferior */
+    left: 0;
+    width: 100%; /* Define a largura do rodapé */
+}
+
+/* Estilo para o texto do rodapé */
+.footer-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/*------------------------------------------------*/
+
+.conteiner {
+    padding-top: 200px;
+}
+
+.conteiner #atendimento {
+    width: 300px; 
+    padding: 20px;
+    font-family: sans-serif;
+    border: 1px solid #ccc;
+    text-align: center; 
+}
+
+#atendimento {
+        margin: 20px auto;
+        width: 400px;
+        padding-top: 200px;
+        border-radius: 5px;
+        background-color: #ffffff;
+        padding-bottom: 150px;
+        
+}
+
+#atendimento h1 {
+    margin-top: 0;
+}
+
+#areadetexto {
+    margin-top: 10px;
+}
+
+#resultado {
+    margin-top: 20px;
+}
+
+/* Estilo extra para melhorar a aparência dos selects e textarea */
+select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #F49F1C;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    display: block;
+    margin: 0 auto;
+}
+
+button:hover {
+    background-color: #bd8025;
+}
