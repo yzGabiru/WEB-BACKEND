@@ -147,7 +147,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .container .formularioBusca {
@@ -155,7 +154,6 @@
   padding: 20px;
   border: 1px solid #ccc;
   text-align: center; 
-  flex-wrap: wrap;
 }
 
 /* Estilo para o botão */
@@ -182,7 +180,6 @@
   padding: 20px;
   border-radius: 10px;
   background-color: #f9f9f9;
-  flex-wrap: wrap;
 }
 
 #atendimento h1 {
@@ -224,6 +221,8 @@ button:hover {
 
 
 
+
+
 /* Estilos para telas menores */
 @media screen and (max-width: 768px) {
   .site-header {
@@ -245,7 +244,6 @@ button:hover {
 
   .container .formularioBusca {
     width: 90%;
-    flex-wrap: wrap;
   }
 }
 
@@ -262,7 +260,6 @@ button:hover {
 
   .formulario {
     width: 100%;
-    flex-wrap: wrap;
   }
 
   .container .formularioBusca {
