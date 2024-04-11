@@ -22,7 +22,7 @@ if (isset($_GET['valor'])) {
     $consulta->execute();
 
     // VERIFICA SE FOI ENCONTRADA ALGUMA COISA
-    if ($consulta->rowCount() > 0) {
+    if ($consulta->rowCount() != 0) {
 
         echo "<h2>Resultados da busca:</h2>";
         echo "<ul>";
@@ -32,6 +32,16 @@ if (isset($_GET['valor'])) {
 
         //LOOP PARA MOSTRAR OS DADOS DO PACIENTE UM EMBAIXO DO OUTRO
         while ($row = $consulta->fetch(PDO::FETCH_ASSOC)) {
+            //PEGA NO ARRAY DE LINHA O TIPO SANGUINEO
+            $tipo_s =  $row["TIPO_S"];
+            //PEGA O NOME DO TIPO SANGUINEO BASEADO NO ID
+            $tipoS = $conect->prepare("SELECT NM_TIPO_S FROM tipo_sanguineo WHERE CD_TIPO_S = :tipo_s");
+            //FAZ A SUBSTITUIÇÃO DE TIPO_S PELA VARIAVEL NO SQL E A EXECUTA
+            $tipoS->execute(array(':tipo_s' => $tipo_s));
+            // PEGA O RESULTADO DA CONSULTA
+            $tipoSanguineo = $tipoS->fetch(PDO::FETCH_ASSOC); 
+
+
             echo "<li> <strong>";
             echo "Nome: " . $row['NOME'] . " <br>";
             echo "Idade: " . $row['IDADE'] . "<br>";
@@ -41,6 +51,7 @@ if (isset($_GET['valor'])) {
             echo "Endereço: " . $row['ENDERECO'] . "<br>";
             echo "Peso: " . $row['PESO'] . "<br>";
             echo "Altura: " . $row['ALTURA'] . "<br>";
+            echo "Tipo Sanguíneio: ". $tipoSanguineo['NM_TIPO_S']. "<br>";
             echo "Ativo: " . $row['ATIVO'] . "<br>";
             //CRIA UM BOTAO NO HTML E ATRIBUI A ELE ALGUNS DADOS PRA SEREM ENVIADOS PRA OUTRA PAGINA QUANDO CLICADO
             echo "<div class='button-container'><a href='prontuario.html?id_paciente=". urlencode($row['CD_PACIENTE']) . "&nome=".  urlencode($row['NOME']) . "' class='ver-prontuario-button'>VER PRONTUÁRIO</a></div><br>";

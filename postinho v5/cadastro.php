@@ -10,7 +10,7 @@ function verificarCPF($cpf) {
   $verificar_cpf->bindParam(':cpf', $cpf);
   $verificar_cpf->execute();
 
-  
+  //ROWCOUNT RETORNA A QUANTIDADE DE LINHAS NO BANCO DE DADOS  
   if($verificar_cpf->rowCount() != 0 ){
        // CPF JA CADASTRADO
       return true;
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conect = new PDO("mysql:host=localhost;dbname=postinho", "root", "");
     //PEGA O CPF QUE FOI MANDADO PELO AJAX PRA VERIFICAR SE ELE JA EXISTE
     $cpf = $_POST['cpf'];
-
+    
     if(verificarCPF($cpf)){
       echo '<html><p><h2 style="color: #030E4F; font-family: sans-serif;">CPF JA CONSTA NO SISTEMA!</h2></p></html>';
     } else { //SE NAO EXISTIR ELE SEGUE COM O PROGRAMA PRA SALVAR OS DADOS NO BANCO DE DADOS
