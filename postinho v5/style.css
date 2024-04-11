@@ -61,6 +61,7 @@
 .conteiner {
     display: flex;
     justify-content: center; /* alinhamento horizontal central */
+    flex-wrap: wrap;
     padding-top: 250px;
     text-align: center;
     font-family: 'poppins',sans-serif;
