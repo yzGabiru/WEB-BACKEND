@@ -1,0 +1,4 @@
+-- trabalho do 3 periodo de sistemas de informação
+-- instituição unesc
+-- integrantes: PAULO HENRIQUE TM, ELENA B, TASSSIO R
+-- nunca vi um codigo tao confuso em toda minha vida
