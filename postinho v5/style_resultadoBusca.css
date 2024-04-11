@@ -1,0 +1,78 @@
+
+
+/* Estilos gerais */
+
+h1, h2 {
+    color:#F49F1C;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos específicos para os resultados da busca */
+#resultado {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 18px;
+}
+
+#resultado h2 {
+    margin-bottom: 10px;
+}
+
+#resultado p {
+    color: #777;
+}
+
+#resultado ul {
+    margin-top: 10px;
+}
+
+#resultado li {
+    border: 1px solid #ddd;
+}
+
+#resultado li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Estilos para o botão "Ver Prontuário" */
+
+.ver-prontuario-button button {
+    padding-top: 20px;
+
+}
+
+.ver-prontuario-button {
+    background-color: #F49F1C;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos para o contêiner do botão "Ver Prontuário" */
+.button-container {
+    text-align: center;
+    margin-top: 20px; /* Espaçamento superior para separar os resultados do botão */
+}
+
+
+.ver-prontuario-button:hover {
+    background-color: #b57719;
+}
+

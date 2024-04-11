@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Cliente</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style_consulta.css">
+
+</head>
+<body>
+<header class="site-header">
+        <h1 class="site-title" >MEDQUINHO</h1>
+        <nav class="site-nav">
+            <a href="index.php">VOLTAR</a>
+        </nav>
+</header>
+    <div class="conteiner">
+        <div class="formularioBusca">
+        <h1>Buscar Paciente</h1>
+        <form id="formBusca">
+            <select id="busca" name="busca" >
+            <option value="cpf">CPF</option>
+            <option value="nome">NOME COMPLETO</option>
+            </select>
+            <input type="text" id="valor" name="valor" placeholder="CPF ou NOME" required>
+            <button type="submit">Procurar</button>
+        </form>
+            <div id="resultado"> 
+            </div>
+        </div>
+    </div>
+  
+  
+    <script>
+        $(document).ready(function(){
+            $('#formBusca').submit(function(e){
+                e.preventDefault(); 
+                var formData = $(this).serialize(); // PEGA OS DADOS DO FORMULARIO DE UMA VEZ (ATE PQ SÓ TEM UM)
+                $.ajax({
+                    url: 'buscar_cliente.php', //ONDE VAI ACONTECER O SELECT
+                    type: 'GET', 
+                    data: formData, 
+                    success: function(response){ 
+                        $('#resultado').html(response); // COLOCA A RESPOSTA NA DIV RESULTADO
+                    }
+                });
+            });
+        });
+    </script>
+        <footer class="site-footer">
+            <p class="footer-text">UNESC - 2024</p>
+        </footer>
+</body>
+</html>

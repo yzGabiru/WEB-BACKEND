@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_prontuario.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Sobre</title>
+</head>
+<header class="site-header">
+    <h1 class="site-title">MEDQUINHO</h1>
+    <nav class="site-nav">
+        <a href="consulta.html" class="sobre">VOLTAR</a>
+    </nav>
+</header>
+<body>
+<div class="alinhar">
+    <div class="container_sobre">
+        <h1>Detalhes do paciente</h1>
+    </div>
+    <div class="centro_sobre">
+        <p>
+        <div id="detalhesPaciente">
+            <h2><strong>Nome:</strong> <span id="nomePaciente"></span></h2>
+            <P><strong>PRONTUARIO:</strong></P>
+
+            <div id="resultado">
+                
+            </div>
+
+        </div>
+        </p>
+    </div>
+</div>
+
+
+<script>
+    // QUANDO O BOTAO DO VER PRONTUARIO(BUSCAR_CLIENTE.PHP) FORM CLICADO OS DADOS VAO FICAR NA URL
+    //ESSA FUNCAO PEGA ESSES DADOS DO URL
+    function obterParametroUrl(nomeParametro) {
+        var urlSearchParams = new URLSearchParams(window.location.search);
+        return urlSearchParams.get(nomeParametro);
+    }
+
+    // // ATRIBUINDO OS DADOS A UMA VARIAVEL DENTRO DESSE ARQUIVO
+    var nomePaciente = obterParametroUrl('nome');
+
+    // // EXIBE O NOME DO PACIENTE
+    document.getElementById('nomePaciente').innerText = nomePaciente;
+
+    // QUANDO O DOCUMENTO CARREGAR
+    $(document).ready(function() {
+        var idPaciente = obterParametroUrl('id_paciente'); //MESMA COISA QUE PEGAR O NOME SO QUE A VARIABEL
+
+        // COLOCA O ID NO FORMDATA
+        var formData = {
+            id_paciente: idPaciente
+        };
+
+        // FAZ O AJAX
+        $.ajax({
+            type: 'POST',
+            url: 'pegar_diagnostico.php',
+            data: formData,
+            success: function(response) {
+                $('#resultado').html(response); // EXIBE NO RESULTADO
+            }
+        });
+    });
+
+
+
+
+
+
+</script>
+
+    <footer class="site-footer">
+        <p class="footer-text" style="color: #F49F1C;">UNESC - 2024</p>
+    </footer>
+
+
+</body>
+</html>

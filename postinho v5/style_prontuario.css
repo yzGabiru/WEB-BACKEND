@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*
+body {
+    justify-content: center;
+    align-items: center;
+    font-family: 'poppins', sans-serif ;
+}
+
+h1, h2 {
+  color:#F49F1C;
+}
+.site-header {
+    background-color: #030E4F; /* Azul */
+    color: #F49F1C;
+    padding: 15px; /* Espaçamento interno */
+    position: fixed; 
+    top: 0;
+    left: 0; 
+    font-family:'poppins', sans-serif;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-title {
+    font-size:50px;
+    font-weight: bold;
+}
+
+/* Estilo para os links de navegação */
+.site-nav a {
+    text-decoration: none;
+    color: #F49F1C;
+    margin-right: 20px;
+    padding: 30px;
+    font-size: 20px;
+    
+}
+
+
+/* Estilo para o rodapé */
+.site-footer {
+    background-color: #030E4F; /* Azul */
+    color: #F49F1C; /* Texto branco */
+    text-align: center;
+    padding: 10px;
+    font-family: 'poppins',sans-serif;
+    position: fixed; /* Fixa o rodapé no final da página */
+    bottom: 0; /* Alinha o rodapé à parte inferior */
+    left: 0;
+    width: 100%; /* Define a largura do rodapé */
+}
+
+/* Estilo para o texto do rodapé */
+.footer-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*----------------------------------------------------------------------------*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.diagnostico {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.error {
+    color: #ff0000;
+}
