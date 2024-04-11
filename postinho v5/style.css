@@ -61,7 +61,6 @@
 .conteiner {
     display: flex;
     justify-content: center; /* alinhamento horizontal central */
-    flex-wrap: wrap;
     padding-top: 250px;
     text-align: center;
     font-family: 'poppins',sans-serif;
@@ -216,53 +215,4 @@ button {
 
 button:hover {
   background-color: #0056b3;
-}
-
-
-
-
-
-
-/* Estilos para telas menores */
-@media screen and (max-width: 768px) {
-  .site-header {
-    padding: 10px;
-  }
-  
-  .site-title {
-    font-size: 40px;
-  }
-
-  .site-nav a {
-    padding: 15px;
-    font-size: 16px;
-  }
-
-  .formulario {
-    width: 90%;
-  }
-
-  .container .formularioBusca {
-    width: 90%;
-  }
-}
-
-/* Estilos para telas ainda menores */
-@media screen and (max-width: 576px) {
-  .site-title {
-    font-size: 30px;
-  }
-
-  .site-nav a {
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  .formulario {
-    width: 100%;
-  }
-
-  .container .formularioBusca {
-    width: 100%;
-  }
 }
